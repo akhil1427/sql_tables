@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class EmployeeTable(models.Model):
-    Empno=models.IntegerField(primary_key=True)
+    Empno=models.IntegerField()
     Ename=models.CharField(max_length=50)
     Job=models.CharField(max_length=20)
     Mgr=models.IntegerField()
@@ -18,7 +18,7 @@ class DEPT(models.Model):
     D_Name=models.CharField(max_length=20)
     Loc=models.CharField(max_length=30)
     def __str__(self):
-        return  str (self.pk)
+        return  self.D_Name
 
 class SalGrade(models.Model):
     Grade=models.IntegerField()

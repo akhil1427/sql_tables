@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>table</h1>
+        <table border="3px">
+            <tr>
+                <th>pkno</th>
+                <th>Empno</th>
+                <th>Ename</th>
+                <th>Job</th>
+                <th>Mgr</th>
+                <th>Hire_Date</th>
+                <th>Sal</th>
+                <th>comm</th>
+                <th>dept</th>
+            </tr>
+            {% for E in topics %}
+             <tr>
+                <td>{{ E.pk }}</td>
+                <td>{{ E.Empno }}</td>
+                <td>{{ E.Ename }}</td>
+                <td>{{ E.Job }}</td>
+                <td>{{ E.Mrg }}</td>
+                <td>{{ E.Hire_Date }}</td>
+                <td>{{ E.Sal }}</td>
+                <td>{{ E.Comm }}</td>
+                <td>{{ E.Dept_No }}</td>
+             </tr>
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>
